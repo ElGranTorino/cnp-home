@@ -3,25 +3,23 @@
 @tailwind utilities;
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --darkest: 0 0% 0%;
+  --lightest: 0 0% 100%;
+  --accent: 36 95% 78%;
+  --dark: 60 14% 3%;
+  --gray: 0 0% 20%;
+  --light-gray: 60 0% 51%;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.blur-panel {
+ background: linear-gradient(180deg, rgba(255, 255, 255, 0.01) 5.3%, rgba(0, 0, 0, 0.2) 71.55%, rgba(255, 255, 255, 0.01) 106.03%);
+ mix-blend-mode: normal;
+ background-blend-mode: overlay;
+ backdrop-filter: blur(60px);
+ opacity: .99;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
-}

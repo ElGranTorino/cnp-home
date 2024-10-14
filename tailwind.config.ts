@@ -8,9 +8,20 @@ const config: Config = {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        hero: "url('/img/backgrounds/hero.png')",
+      },
+      fontFamily: {
+        mulish: ["var(--font-mulish)"],
+        kharkiv: ["var(--font-kharkiv)"],
+      },
       colors: {
-        background: "var(--background)",
-        foreground: "var(--foreground)",
+        darkest: "hsl(var(--darkest))",
+        lightest: "hsl(var(--lightest))",
+        accent: "hsl(var(--accent))",
+        dark: "hsl(var(--dark))",
+        gray: "hsl(var(--gray))",
+        lightGray: "hsl(var(--light-gray))",
       },
     },
   },
